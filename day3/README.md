@@ -9,8 +9,6 @@
 * util.py: [ユーティリティ関数群]
 * fib.mc: {試験用プログラム}
 
-* build.sh
-
 # Requirements
 
 - Python Lex-Yacc 3.11
