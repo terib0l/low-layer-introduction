@@ -1,0 +1,17 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2004"
+  config.vm.synced_folder "./workspace", "/home/vagrant/workspace"
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    echo "Install Clang & LLVM"
+    sudo apt-get update
+    sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+    echo "Install PLY"
+    sudo apt-get install -y python3-distutils
+    wget http://www.dabeaz.com/ply/ply-3.11.tar.gz
+    tar zxvf ply-3.11.tar.gz
+    cd ply-3.11/
+    sudo python3 setup.py install
+  SHELL
+end

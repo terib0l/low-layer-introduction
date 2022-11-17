@@ -1,0 +1,6 @@
+parser.out
+parsetab.py
+fib.ll
+__pycache__/
+main-fib.c
+fib
