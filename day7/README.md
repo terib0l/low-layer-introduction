@@ -45,10 +45,22 @@ Nothing
   * RISC-V: OR, ADD, LUI+ADD, LI / (Address) LA, AUIPC+ADDI, AUIPC+LW
 * LOAD/STR
   * Arm32: LDRB, LDRSB, LDRH, LDRSH, LDR / STRB, STRH, STR
-  * Arm64: LDRB, LDRSB, LDRH, LDRSH, LDR, LDRSW / STRB, STRH, STR
+  * Arm64:
+    * LDRB, LDRH, LDR, LDRSB, LDRSH, LDRSW / STRB, STRH, STR
+    * For AArch32
+      * LDURB, LDURH, LDUR, LDURSW / STURB, STURH, STUR
+      * ...
   * RISC-V: 
+    * LB, LH, LW, LBU, LHU / SB, SH, SW
 * LOOP and Conditions
-  * Arm32: 
-  * Arm64: 
+  * Arm32:
+    * Flags: Z[ero], N[egative], C[arry], V[...overflow]
+    * Conditions: EQ, NE, CS/HS, CC/LO, MI, PL, VS, VC, HI, LS, GE, LT, GT, LE, (AL)
+    * CMP, TST, ADDS, SUBS
+    * ADD, SUB
+  * Arm64:
+    * ~~CMP~~, TST, ADDS, SUBS, CBZ, CBNZ, TBZ, TBNZ
   * RISC-V: 
+    * Flags: None
+    * BEQ, BNE, BLT, BGE, BLTU, BGEU
 

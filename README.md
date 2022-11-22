@@ -10,28 +10,5 @@ Reference: Interface 2021/2
 - [x] Day4. OS Kernel [Multi-tasks, Memory Management]
 - [x] Day5. Realtime OS
 - [x] Day6. Virtualization
-- [ ] Day7. Assembly Language
+- [x] Day7. Assembly Language
 
-## Memo
-
-### Flow of Compile
-
-```
-## Clang (Flontend) ##
-#                    #
-#  Sourcecode        #
-#     |              #
-#    AST             #
-#     |              #
-######################
-      |
-  LLVM IR/bitcode
-      |
-## LLVM (Middle/Backend) ##
-#     |                   #
-#  Machine IR             #
-#     |                   #
-###########################
-      |
-  assembly/machicode
-```
